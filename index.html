@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+  background-color: #04AA6D;
+}
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+a {
+    margin-top:2%
+}
+a.fieldInfo {
+    font-weight:bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2;
+}
+a.tit {
+font-size: x-large;
+}
+a.fieldData {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 2;
+}
+img {
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li ><a id="aInfo" onclick="myFunction('aInfo')" class="active" href="#Info">Información</a></li>
+  <li><a  id="aExperience" onclick="myFunction('aExperience')" href="#Experience">Experiencia</a></li>
+  <li><a  id="aEducation" onclick="myFunction('aEducation')" href="#Education">Educacion</a></li>
+  <li><a  id="aContact" onclick="myFunction('aContact')" href="#Contact">Contacto</a></li>
+</ul>
+
+<div id="infoDiv" >
+
+    <img src="4.jpg" >
+    <br>
+    <a  class="fieldInfo">Nombre </a>
+    <a  class="fieldData"> Lucio  </a>
+<br>
+<a  class="fieldInfo">Apellido </a>
+<a  class="fieldData"> Ramirez  </a>
+<br>
+<a  class="fieldInfo">Dirección </a>
+<a  class="fieldData"> Dorrego 817 - Rosario - Santa Fe </a>
+<br>
+<a  class="fieldInfo">Teléfono </a>
+<a  class="fieldData"> 3413281702 </a>
+<br>
+<a  class="fieldInfo">Mail </a>
+<a  class="fieldData"> lucioramirez18@gmail.com </a>
+<br>
+</div>
+
+<div id="expDiv" style="margin-top: -391px; visibility: hidden" >
+    <a  class="tit fieldInfo">Experiencia laboral: </a>
+    <br>
+<a  class="fieldInfo">Institución: </a>
+<a  class="fieldData"> Colegio Maristas N. 8120  </a>
+<br>
+<a  class="fieldInfo">Puesto:  </a>
+<a  class="fieldData"> Profesor adjunto de inglés </a>
+<br>
+<a  class="fieldInfo">Dirección: Oroño 830 - Rosario - Santa Fe</a>
+<a  class="fieldData"> 3413281702 </a>
+<br>
+<a  class="fieldInfo">Años: </a>
+<a  class="fieldData"> 2016 - Presente </a>
+<br>
+<br>
+<a  class="fieldInfo">Institución: </a>
+<a  class="fieldData"> Instituto de inglés Oxford  </a>
+<br>
+<a  class="fieldInfo">Puesto:  </a>
+<a  class="fieldData"> Profesor de inglés 4to año Adultos </a>
+<br>
+<a  class="fieldInfo">Dirección: </a>
+<a  class="fieldData"> Mendoza 4830 - Rosario - Santa Fe </a>
+<br>
+<a  class="fieldInfo">Años: </a>
+<a  class="fieldData"> 2019 - Presente </a>
+<br>
+</div>
+
+<div id="edDiv" style="margin-top: -363px; visibility: hidden" >
+    <a  class="tit fieldInfo">Educación </a>
+    <br>
+    <a  class="fieldInfo">Institución Secundaria: </a>
+    <a  class="fieldData"> Colegio Nuestra Señora del Rosario N. 640  </a>
+    <br>
+    <a  class="fieldInfo">Titulo:  </a>
+    <a  class="fieldData"> Gestión de las organizaciones</a>
+    <br>
+    <a  class="fieldInfo">Dirección: </a>
+    <a  class="fieldData"> Salta 830 - Rosario - Santa Fe </a>
+    <br>
+    <a  class="fieldInfo">Años: </a>
+    <a  class="fieldData"> 2011 - 2015 </a>
+    <br>
+    <br>
+    <a  class="fieldInfo">Institución Primaria: </a>
+    <a  class="fieldData"> Escuela primaria Sarmiento  </a>
+    <br>
+    <a  class="fieldInfo">Dirección: </a>
+    <a  class="fieldData"> Corrientes 4830 - Rosario - Santa Fe </a>
+    <br>
+    <a  class="fieldInfo">Años: </a>
+    <a  class="fieldData"> 2006 - 2010 </a>
+    <br>
+    </div>
+
+    <div id="conDiv" style="margin-top: -330px; visibility: hidden" >
+        <a  class="tit fieldInfo">Contacto </a>
+        <br>
+        <a  class="fieldData"> Puede contactarse conmigo mediante:  </a>
+        <br>
+        <a  class="fieldInfo">Teléfono </a>
+        <a  class="fieldData"> 3413281702 </a>
+        <br>
+        <a  class="fieldInfo">Mail </a>
+        <a  class="fieldData"> lucioramirez18@gmail.com </a>
+        </div>
+<script>
+    function myFunction(div) {
+        
+     var element = document.getElementById(div);
+     element.classList.add("active");
+     if(div=='aInfo')
+     {
+        document.getElementById("aExperience").classList.remove("active");
+        document.getElementById("aEducation").classList.remove("active");
+        document.getElementById("aContact").classList.remove("active");
+        document.getElementById("infoDiv").style.visibility = "visible";
+        document.getElementById("expDiv").style.visibility = "hidden";
+        document.getElementById("edDiv").style.visibility = "hidden";
+        document.getElementById("conDiv").style.visibility = "hidden";
+     }
+     if(div=='aExperience')
+     {
+        document.getElementById("aInfo").classList.remove("active");
+        document.getElementById("aEducation").classList.remove("active");
+        document.getElementById("aContact").classList.remove("active");
+        document.getElementById("infoDiv").style.visibility = "hidden";
+        document.getElementById("expDiv").style.visibility = "visible";
+        document.getElementById("edDiv").style.visibility = "hidden";
+        document.getElementById("conDiv").style.visibility = "hidden";
+     }
+     if(div=='aEducation')
+     {
+        document.getElementById("aInfo").classList.remove("active");
+        document.getElementById("aExperience").classList.remove("active");
+        document.getElementById("aContact").classList.remove("active");
+        document.getElementById("infoDiv").style.visibility = "hidden";
+        document.getElementById("expDiv").style.visibility = "hidden";
+        document.getElementById("edDiv").style.visibility = "visible";
+        document.getElementById("conDiv").style.visibility = "hidden";
+     }
+     if(div=='aContact')
+     {
+        document.getElementById("aInfo").classList.remove("active");
+        document.getElementById("aEducation").classList.remove("active");
+        document.getElementById("aExperience").classList.remove("active");
+        document.getElementById("infoDiv").style.visibility = "hidden";
+        document.getElementById("expDiv").style.visibility = "hidden";
+        document.getElementById("edDiv").style.visibility = "hidden";
+        document.getElementById("conDiv").style.visibility = "visible";
+     }
+    }
+</script>    
+
+
+</body>
+</html>
+
